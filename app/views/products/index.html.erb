@@ -2,10 +2,10 @@
 <div class="product-container">
 	<% @products.each do |product| %>
 		<div class="product-card">
-			<h3 class="product-name"><%= product.name %></h3>
+			<h3 class="product-name"><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
 			<img src="http://lorempixel.com/150/210/abstract">
 			<p><%= product.description %></p>
-			<p><%= product.price %></p>
+			<p>$<%= product.price %></p>
 		</div>
 	<% end %>
 </div>
